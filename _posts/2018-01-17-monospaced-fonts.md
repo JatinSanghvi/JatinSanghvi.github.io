@@ -15,7 +15,7 @@ VS Code is built on top of Github's [Electron](https://electronjs.org). Electron
 Here's how **Consolas** looks like on VS Code:
 
 <figure align="center">
-  <img src="/assets/images/consolas-font.png">
+  <img src="/assets/img/posts/consolas-font.png">
   <figcaption>Consolas Font</figcaption>
 </figure>
 
@@ -24,7 +24,7 @@ Consolas and similarly a lot of monospaced fonts may work great for shell applic
 **Source Code Pro**
 
 <figure align="center">
-  <img src="/assets/images/source-code-pro-font.png">
+  <img src="/assets/img/posts/source-code-pro-font.png">
   <figcaption>Source Code Pro Font</figcaption>
 </figure>
 
@@ -33,7 +33,7 @@ Source Code Pro ([download link](https://www.fontsquirrel.com/fonts/download/sou
 **Fira Code**
 
 <figure align="center">
-  <img src="/assets/images/fira-code-font.png">
+  <img src="/assets/img/posts/fira-code-font.png">
   <figcaption>Fira Code Font</figcaption>
 </figure>
 
@@ -47,7 +47,7 @@ Fira Code ([download link](https://www.fontsquirrel.com/fonts/download/fira-code
 **Luxi Mono**
 
 <figure align="center">
-  <img src="/assets/images/luxi-mono-font.png">
+  <img src="/assets/img/posts/luxi-mono-font.png">
   <figcaption>Luxi Mono Font</figcaption>
 </figure>
 
