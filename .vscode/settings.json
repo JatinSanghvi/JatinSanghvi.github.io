@@ -1,0 +1,5 @@
+{
+    "evenBetterToml.formatter.alignComments": false,
+    "evenBetterToml.formatter.indentEntries": true,
+    "evenBetterToml.formatter.indentString": "  "
+}

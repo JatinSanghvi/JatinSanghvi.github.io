@@ -1,0 +1,121 @@
+---
+title: Balancing the wait times
+---
+
+## Background
+
+So my younger son studies in an online classroom of 31 students. It was their viva test time last week. The tests covered three subjects in total over three separate days. The format of these kinds of tests require that only one student is online in the meeting with the teacher at a given time. The teacher decided to align the test times based on the student's classroom roll numbers.
+
+To ensure that the students having larger roll numbers are not called in the end everyday, she informed the parents that she will call students on the three days in following order, so as to more evenly distribute the wait times among students:
+
+- **Day 1** - Roll number **1 to 31**.
+- **Day 2** - Roll number **31 to 1**.
+- **Day 3** - Roll number **16 to 31** and then from **1 to 15**.
+
+On hearing this, my immediate thought was that this does not balances the wait times evenly. With this setup, the student with number 16 waits for half the time on days 1 and 2 but does not wait at all on day 3. On other hand, student with number 15 waits almost half the time on days 1 and 2 but waits full time on day 3. So their is dicrepancy and we could have set it up in a way that had evenly distributed the wait times (after summing across all days) for all students.
+
+## Optimal Arrangement
+
+A few days later, when the vivas for my son begun, I thought about this problem again. Intuitively, I thought that the following arrangement should yield a better outcome:
+
+- **Day 1** - Roll number **1 to 31**. *(Day 1 ordering can always stay same without loss in generality)*
+- **Day 2** - Roll number **11 to 31** and then **1 to 10**.
+- **Day 3** - Roll number **21 to 31** and then **1 to 20**.
+
+This did not improve or worsen the wait times. Lets say that the first student to be called does not wait at all, or in other words, waits for 0 time-units, and the wait time increases by 1 unit for each successive student, reaching 30 for the last student who gets called.
+
+With teacher's arrangment,
+
+- Student with roll number **16** waits for (15 + 15 + 0) = **30** units after all days.
+- Student with roll number **17** waits for (16 + 14 + 1) = **31** units after all days.
+- Student with roll number **18** waits for (17 + 13 + 2) = **32** units after all days.
+- ...
+- ...
+- Student with roll number **13** waits for (12 + 18 + 28) = **59** units.
+- Student with roll number **14** waits for (13 + 17 + 29) = **59** units.
+- Student with roll number **15** waits for (14 + 16 + 30) = **60** units.
+
+And with the new arrangement,
+
+- Student with roll number **21** waits for (20 + 10 + 0) = **30** units.
+- Student with roll number **11** waits for (10 + 0 + 21) = **31** units.
+- Student with roll number **1** waits for (0 + 21 + 11) = **32** units.
+- Student with roll number **22** waits for (21 + 11 + 1) = **33** units.
+- ...
+- ...
+- Student with roll number **30** waits for (29 + 19 + 9) = **57** units.
+- Student with roll number **20** waits for (19 + 9 + 30) = **58** units.
+- Student with roll number **10** waits for (9 + 30 + 20) = **59** units.
+- Student with roll number **31** waits for (30 + 20 + 10) = **60** units.
+
+After some more scribbling on paper, I could finally come up with the optimal arrangement. Check the table below. Notice how the first-half and second-half of roll numbers are interleaved on day 3.
+
+| Day 1 Sequence | Day 2 Sequence | Day 3 Sequence |
+|---------------:|---------------:|---------------:|
+| 1              | 16             | 31             |
+| 2              | 17             | 15             |
+| 3              | 18             | 30             |
+| 4              | 19             | 14             |
+| 5              | 20             | 29             |
+| 6              | 21             | 13             |
+| 7              | 22             | 28             |
+| ...            | ...            | ...            |
+| 14             | 29             | 9              |
+| 15             | 30             | 24             |
+| 16             | 31             | 8              |
+| 17             | 1              | 23             |
+| 18             | 2              | 7              |
+| ...            | ...            | ...            |
+| 29             | 13             | 17             |
+| 30             | 14             | 1              |
+| 31             | 15             | 16             |
+
+To prove that the above arrangement works, here is another table, this time ordered by roll numbers. Take a close look between the differences in per-day wait times of consecutive students to get a sense of how the above arrangement delivers balanced wait times.
+
+| Roll Number | Day 1 Wait Time | Day 2 Wait Time | Day 3 Wait Time | Total Wait Time |
+|------------:|----------------:|----------------:|----------------:|----------------:|
+| **1**       | 0               | 16              | 29              | 45              |
+| **2**       | 1               | 17              | 27              | 45              |
+| **3**       | 2               | 18              | 25              | 45              |
+| **4**       | 3               | 19              | 23              | 45              |
+| **5**       | 4               | 20              | 21              | 45              |
+| **6**       | 5               | 21              | 19              | 45              |
+| **7**       | 6               | 22              | 17              | 45              |
+| **...**     | ...             | ...             | ...             | ...             |
+| **14**      | 13              | 29              | 3               | 45              |
+| **15**      | 14              | 30              | 1               | 45              |
+| **16**      | 15              | 0               | 30              | 45              |
+| **17**      | 16              | 1               | 28              | 45              |
+| **18**      | 17              | 2               | 26              | 45              |
+| **...**     | ...             | ...             | ...             | ...             |
+| **29**      | 28              | 13              | 4               | 45              |
+| **30**      | 29              | 14              | 2               | 45              |
+| **31**      | 30              | 15              | 0               | 45              |
+
+## More Thoughts
+
+The challenge to arrange the students arises only if the number of days is odd. Had there been an even number of days, we would have simply arranged students from start..end on odd days and from end..start on even days. Naturally, we would have failed in balancing the wait times if we were a single day. But for other values of odd days, say **D**, we would have arranged students from start..end and from end..start on alternate days for **D - 3** days, and used the same arrangement as described above for the final 3 days.
+
+Now, consider what happens if we have three days and even number of students. Would we be able to get same wait times for all students if summed across the three days? The answer is a 'no'. Let us say, there are **S** students. The wait times everyday varies from **0** to **S - 1** averaging at **(S - 1) / 2**. Hence, if all students had same total wait times after the three days, every student will have total wait time of **3 x (S - 1) / 2** which can be a whole number only if **S**, the number of students is odd.
+
+But we can still reach a near-balanced solution for students with even count. We can have a solution where the total wait time for each student is just **0.5** above or below the value **3 x (S - 1) / 2**. Following table shows one such possible sequence for **6** students.
+
+| Day 1 Sequence | Day 2 Sequence | Day 3 Sequence |
+|---------------:|---------------:|---------------:|
+| 1              | 4              | 3              |
+| 2              | 5              | 6              |
+| 3              | 6              | 2              |
+| 4              | 1              | 5              |
+| 5              | 2              | 1              |
+| 6              | 3              | 4              |
+
+And now the wait times ordered by roll numbers.
+
+| Roll Number | Day 1 Wait Time | Day 2 Wait Time | Day 3 Wait Time | Total Wait Time |
+|------------:|----------------:|----------------:|----------------:|----------------:|
+| **1**       | 0               | 3               | 4               | 7               |
+| **2**       | 1               | 4               | 2               | 7               |
+| **3**       | 2               | 5               | 0               | 7               |
+| **4**       | 3               | 0               | 5               | 8               |
+| **5**       | 4               | 1               | 3               | 8               |
+| **6**       | 5               | 2               | 1               | 8               |
