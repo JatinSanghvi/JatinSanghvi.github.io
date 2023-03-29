@@ -9,7 +9,7 @@ title: Jatin Sanghvi
 # description: My awesome website
 # copyright: "Copy, _right?_ :thinking_face:"
 
-dateFormat: 2 January 2006
+dateFormat: January 02, 2006
 
 # params:
 #   mainSections:
@@ -20,7 +20,7 @@ author:
   name: Jatin Sanghvi
   image: img/author.png
   headline: Software Developer
-  bio: An ordinary software developer who works on ordinary stuff.
+  bio: I work for Microsoft as a senior software engineer. I share interest in (and may write about) programming languages, software development process, simple mathematics, graphic design, and philosophy.
   links:
     # - email: mailto:hello@your_domain.com
     # - link: https://link-to-some-website.com/
@@ -54,7 +54,7 @@ author:
     # - slack: https://workspace.url/team/userid
     # - snapchat: https://snapchat.com/add/username
     # - soundcloud: https://soundcloud.com/username
-    # - stack-overflow: https://stackoverflow.com/users/userid/username
+    - stack-overflow: https://stackoverflow.com/users/470119/jatin-sanghvi
     # - steam: https://steamcommunity.com/profiles/userid
     # - telegram: https://t.me/username
     # - tiktok: https://tiktok.com/@username
