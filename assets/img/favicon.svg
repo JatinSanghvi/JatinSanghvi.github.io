@@ -1,6 +1,8 @@
-<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-     <!-- Violet 300 -->
-    <rect width="24" height="24" fill="#c4b5fd" />
-    <!-- Violet 700 -->
-    <text x="3%" y="50%" font-family="Eras ITC" font-size="22.5" font-weight="bold" fill="#6d28d9" dominant-baseline="central" text-rendering="geometricPrecision">JS</text>
+<svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+     <!-- Rose 800 -->
+    <rect width="16" height="16" fill="#9f1239" />
+     <!-- Rose 500 -->
+    <rect x="1" y="1" width="14" height="14" fill="#f43f5e" />
+    <!-- Rose 100 -->
+    <text x="4.5" y="7.5" font-family="Eras ITC" font-size="14" font-weight="bold" fill="#ffe4e6" dominant-baseline="central" text-rendering="geometricPrecision">J</text>
 </svg>

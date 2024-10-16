@@ -1,5 +1,5 @@
-module github.com/Jatinsanghvi/JatinSanghvi.github.io
+module github.com/JatinSanghvi/JatinSanghvi.github.io
 
-go 1.18
+go 1.23.2
 
-require github.com/jpanther/congo/v2 v2.5.4 // indirect
+require github.com/jpanther/congo/v2 v2.9.0 // indirect

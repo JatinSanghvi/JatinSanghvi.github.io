@@ -38,6 +38,8 @@ With the teacher's arrangement,
 
 Here is how the wait times will look like for each student.
 
+<!-- Referenced https://www.chartjs.org/docs/latest/charts/bar.html -->
+
 {{< chart >}}
 type: 'bar',
 data: {
@@ -46,24 +48,24 @@ data: {
     {
       label: 'Day 1',
       data: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30],
-      backgroundColor: '#6D28D9',
-      borderWidth: 0,
+      backgroundColor: 'rgba(255, 99, 132)',
     },
     {
       label: 'Day 2',
       data: [30, 29, 28, 27, 26, 25, 24, 23, 22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0],
-      backgroundColor: '#8B5CF6',
-      borderWidth: 0,
+      backgroundColor: 'rgba(255, 159, 64)',
     },
     {
       label: 'Day 3',
       data: [16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
-      backgroundColor: '#C4B5FD',
-      borderWidth: 0,
+      backgroundColor: 'rgba(75, 192, 192)',
     },
-  ]
+  ],
 },
 options: {
+  barPercentage: 1.8,
+  borderWidth: 4,
+  borderColor: 'rgba(0, 0, 0, 0)',
   indexAxis: 'y',
   scales: {
     x: {
@@ -71,6 +73,7 @@ options: {
         display: true,
         text: 'Total Wait Times',
       },
+      max: 60,
       stacked: true,
     },
     y: {
@@ -79,10 +82,9 @@ options: {
         display: true,
         text: 'Roll Numbers',
       },
-      max: 60,
       stacked: true,
-    }
-  }
+    },
+  },
 }
 {{< /chart >}}
 
@@ -109,24 +111,24 @@ data: {
     {
       label: 'Day 1',
       data: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30],
-      backgroundColor: '#6D28D9',
-      borderWidth: 0,
+      backgroundColor: 'rgba(255, 99, 132)',
     },
     {
       label: 'Day 2',
       data: [21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
-      backgroundColor: '#8B5CF6',
-      borderWidth: 0,
+      backgroundColor: 'rgba(255, 159, 64)',
     },
     {
       label: 'Day 3',
       data: [11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-      backgroundColor: '#C4B5FD',
-      borderWidth: 0,
+      backgroundColor: 'rgba(75, 192, 192)',
     },
-  ]
+  ],
 },
 options: {
+  barPercentage: 1.8,
+  borderWidth: 4,
+  borderColor: 'rgba(0, 0, 0, 0)',
   indexAxis: 'y',
   scales: {
     x: {
@@ -134,6 +136,7 @@ options: {
         display: true,
         text: 'Total Wait Times',
       },
+      max: 60,
       stacked: true,
     },
     y: {
@@ -143,8 +146,8 @@ options: {
         text: 'Roll Numbers',
       },
       stacked: true,
-    }
-  }
+    },
+  },
 }
 {{< /chart >}}
 
@@ -198,24 +201,24 @@ data: {
     {
       label: 'Day 1',
       data: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30],
-      backgroundColor: '#6D28D9',
-      borderWidth: 0,
+      backgroundColor: 'rgba(255, 99, 132)',
     },
     {
       label: 'Day 2',
       data: [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
-      backgroundColor: '#8B5CF6',
-      borderWidth: 0,
+      backgroundColor: 'rgba(255, 159, 64)',
     },
     {
       label: 'Day 3',
       data: [30, 28, 26, 24, 22, 20, 18, 16, 14, 12, 10, 8, 6, 4, 2, 0, 29, 27, 25, 23, 21, 19, 17, 15, 13, 11, 9, 7, 5, 3, 1],
-      backgroundColor: '#C4B5FD',
-      borderWidth: 0,
+      backgroundColor: 'rgba(75, 192, 192)',
     },
-  ]
+  ],
 },
 options: {
+  barPercentage: 1.8,
+  borderWidth: 4,
+  borderColor: 'rgba(0, 0, 0, 0)',
   indexAxis: 'y',
   scales: {
     x: {
@@ -233,8 +236,8 @@ options: {
         text: 'Roll Numbers',
       },
       stacked: true,
-    }
-  }
+    },
+  },
 }
 {{< /chart >}}
 
@@ -282,24 +285,25 @@ data: {
     {
       label: 'Day 1',
       data: [0, 1, 2, 3, 4, 5],
-      backgroundColor: '#6D28D9',
-      borderWidth: 0,
+      backgroundColor: 'rgba(255, 99, 132)',
     },
     {
       label: 'Day 2',
       data: [3, 4, 5, 0, 1, 2],
-      backgroundColor: '#8B5CF6',
-      borderWidth: 0,
+      backgroundColor: 'rgba(255, 159, 64)',
     },
     {
       label: 'Day 3',
       data: [4, 2, 0, 5, 3, 1],
-      backgroundColor: '#C4B5FD',
-      borderWidth: 0,
+      backgroundColor: 'rgba(75, 192, 192)',
     },
-  ]
+  ],
 },
 options: {
+  aspectRatio: 5,
+  barPercentage: 1.8,
+  borderWidth: 4,
+  borderColor: 'rgba(0, 0, 0, 0)',
   indexAxis: 'y',
   scales: {
     x: {
@@ -307,6 +311,7 @@ options: {
         display: true,
         text: 'Total Wait Times',
       },
+      max: 10,
       stacked: true,
     },
     y: {
@@ -316,7 +321,7 @@ options: {
         text: 'Roll Numbers',
       },
       stacked: true,
-    }
-  }
+    },
+  },
 }
 {{< /chart >}}
