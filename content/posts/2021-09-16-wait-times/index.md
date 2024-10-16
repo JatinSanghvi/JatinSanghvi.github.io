@@ -5,25 +5,25 @@ summary: An arrangement that evenly distributes the waiting times for student in
 
 ## Background
 
-So, my younger son studies in an online classroom. It was the time for their oral tests last week. Well, you know that the written tests are not good indicators of student performance in an online situation, and that too when you are in India :) The oral tests covered three subjects, each to be carried out on a separate day. Each day, the teacher would call students, one at a time in some order, to join her online and answer the questions.
+My younger son studies in an online classroom, and last week was the time for their oral tests. As you might know, written tests are often not reliable indicators of student performance in an online setting, especially when it is India :) The oral tests covered three subjects, each conducted on a separate day. Each day, the teacher would call students one at a time in a specific order to join her online and answer questions.
 
-Now, there were 31 students in the classroom. Had the teacher called the students by their roll numbers i.e., from 1 to 31 every day, the students with higher roll numbers had to always wait until the evening. Therefore, in order to ensure that the wait times are more evenly distributed, the teacher informed the parents that she will call students in the following order on each of the three days:
+There were 31 students in the classroom. If the teacher had called the students by their roll numbers - from 1 to 31 - every day, those with higher roll numbers would always have to wait until the evening. To ensure that wait times were more evenly distributed, the teacher informed the parents that she would call students in the following order over the three days:
 
 - **Day 1**: By roll numbers from **1 to 31**.
 - **Day 2**: By roll numbers from **31 to 1**.
-- **Day 3**: By roll numbers from **16 to 31** and then from **1 to 15**.
+- **Day 3**: By roll numbers from **16 to 31**, followed by **1 to 15**.
 
-On hearing this, my immediate reaction was that this plan does not entirely balance the wait times. With this layout, the student with number 16 will wait for half the time on day 1 and 2 but will not wait at all on day 3. On the other hand, the student with number 15 will (almost) equally wait for half the time on day 1 and 2 but will need to wait until the end on day 3. Hence, the wait times were not fairly distributed, and there could be a better arrangement that had produced an even distribution of wait times after summing over the three days.
+Upon hearing this, my immediate reaction was that this plan does not fully balance the wait times. For instance, the student with roll number 16 would wait for half the time on Days 1 and 2 but would not wait at all on Day 3. Conversely, the student with roll number 15 would experience nearly equal wait times on Days 1 and 2 but would have to wait until the end on Day 3. Thus, the wait times were not fairly distributed, and there might be a better arrangement that could produce a more even distribution of wait times across the three days.
 
 ## Comparing Wait Time Distributions
 
-A few days later, when the oral tests for my son begun, I thought about this problem again. Intuitively, I believed that the following arrangement should have yielded a better outcome than the teacher's arrangement:
+A few days later, when my son's oral tests began, I revisited this issue. Intuitively, I believed that the following arrangement would yield a better outcome than the teacher's original plan:
 
 - **Day 1**: By roll numbers from **1 to 31**.
-- **Day 2**: By roll numbers from **11 to 31** and then from **1 to 10**.
-- **Day 3**: By roll numbers from **21 to 31** and then from **1 to 20**.
+- **Day 2**: By roll numbers from **11 to 31**, followed by **1 to 10**.
+- **Day 3**: By roll numbers from **21 to 31**, followed by **1 to 20**.
 
-By the way, the day 1 ordering can always stay the same i.e., from 1 to 31 irrespective of the arrangement without any loss in generality. Now, let's say that the first student to be called on a given day does not wait at all, or in other words, waits for 0 time-units, and this waiting time increases by 1 unit for each successive student, reaching a duration of 30 units for the last student of that day.
+It's worth noting that the order for Day 1 can remain consistent, rolling from 1 to 31 regardless of the overall arrangement, without losing generality. For the sake of analysis, let's assume that the first student called on any given day waits for 0 time-units, and this waiting time increases by 1 unit for each subsequent student, culminating in a wait time of 30 units for the last student of that day.
 
 With the teacher's arrangement,
 
@@ -36,7 +36,7 @@ With the teacher's arrangement,
 - Student with roll number **14** waits for (13 + 17 + 29) = **59** units.
 - Student with roll number **15** waits for (14 + 16 + 30) = **60** units.
 
-Here is how the wait times will look like for each student.
+Here's how the wait times appear for each student:
 
 <!-- Referenced https://www.chartjs.org/docs/latest/charts/bar.html -->
 
@@ -88,7 +88,7 @@ options: {
 }
 {{< /chart >}}
 
-With the new arrangement that I mentioned above,
+In contrast, with the new arrangement I proposed,
 
 - Student with roll number **21** waits for (20 + 10 + 0) = **30** units.
 - Student with roll number **11** waits for (10 + 0 + 21) = **31** units.
@@ -101,7 +101,7 @@ With the new arrangement that I mentioned above,
 - Student with roll number **10** waits for (9 + 30 + 20) = **59** units.
 - Student with roll number **31** waits for (30 + 20 + 10) = **60** units.
 
-Here is how the new wait times will look like.
+Here's how the new wait times look:
 
 {{< chart >}}
 type: 'bar',
@@ -151,9 +151,9 @@ options: {
 }
 {{< /chart >}}
 
-The new arrangement did not turn out to be either better or worse that the teacher's arrangement. It just managed to redistribute the wait times among a different permutation of students.
+Ultimately, the new arrangement did not prove to be better or worse than the teacher's plan; it merely redistributed the wait times among a different permutation of students.
 
-After some more scribbling on paper, I could finally discover an optimal arrangement. Check out the table below. Notice how the first half and second half of roll numbers are interleaved on day 3.
+After some more scribbling on paper, I finally discovered an optimal arrangement. Take a look at the table below, which illustrates how the first and second halves of the roll numbers are interleaved on Day 3.
 
 | Day 1 Sequence | Day 2 Sequence | Day 3 Sequence |
 |---------------:|---------------:|---------------:|
@@ -172,7 +172,7 @@ After some more scribbling on paper, I could finally discover an optimal arrange
 | 30             | 15             | 17             |
 | 31             | 16             | 1              |
 
-To prove that the above arrangement works, here is another table, this time ordered by roll numbers. Take a close look at the differences in per-day wait times of successive students to get a sense of how the above arrangement delivers balanced wait times.
+To demonstrate that this arrangement is effective, here's another table, this time ordered by roll numbers. Pay close attention to the differences in per-day wait times for successive students; this will give you a clearer understanding of how the arrangement achieves balanced wait times.
 
 | Roll Number | Day 1 Wait Time | Day 2 Wait Time | Day 3 Wait Time | Total Wait Time |
 |------------:|----------------:|----------------:|----------------:|----------------:|
@@ -191,7 +191,7 @@ To prove that the above arrangement works, here is another table, this time orde
 | **30**      | 29              | 13              | 3               | 45              |
 | **31**      | 30              | 14              | 1               | 45              |
 
-If the above table does not help, here is the chart to help visualize the wait-time distribution.
+If the above table doesn't clarify things, here's a chart to help visualize the distribution of wait times.
 
 {{< chart >}}
 type: 'bar',
@@ -241,19 +241,19 @@ options: {
 }
 {{< /chart >}}
 
-I could find a couple of other arrangements that also delivered balanced wait times. However, on inspecting further, it turned out that all of them could be obtained by either shuffling the three days or the roll numbers. In effect, there were no arrangements that were unique in the sense that they could not be constructed by simply reordering the above arrangement.
+I also discovered a couple of other arrangements that provided balanced wait times. However, upon further inspection, it turned out that all of these could be derived by either shuffling the three days or rearranging the roll numbers. Essentially, there were no unique arrangements that could not be constructed by simply reordering the optimal arrangement mentioned above.
 
 ## Generalizing the Solution
 
-### For Arbitrary Number of Days
+### For an Arbitrary Number of Days
 
-The challenge to arrange the students arises only if the number of days is odd. Had there been an even number of days, we could have simply arranged students from start to end on every odd day and from end to start on the even days. Naturally, we would have failed in balancing the wait times if there were a single day. But for other number of odd days, we could begin by arranging the students from start to end on every odd day and then from end to start on the even day until we were left with 3 days, and then we could use the same arrangement as described above for the final 3 days.
+The challenge of arranging students arises only when the number of days is odd. If there were an even number of days, we could simply arrange students from start to end on every odd day and from end to start on the even days. Naturally, balancing wait times would be impossible with just a single day. However, for any odd number of days greater than one, we could start by arranging the students from start to end on every odd day, followed by end to start on the even days, continuing the pattern until we reach three days, at which point we could apply the same arrangement as described earlier.
 
-### For Arbitrary Number of Students
+### For an Arbitrary Number of Students
 
-Now, consider what happens if we have three days and an even number of students. Would we be able to balance wait times for all students? Sadly, this is not possible and here is a small proof. Let's say that there are **S** students. The wait times for students on a given day will progressively increase from **0** to **S-1**, averaging at **(S-1)/2**. The three-day average would be **3(S-1)/2** Hence, if we assume that there is an arrangement that produces the same wait time for all students after three days, then the value of total wait time for each student would be same as the average wait time i.e., **3(S-1)/2**. This expression does not produce a whole number if **S** is an even number.
+Now, let's consider the scenario where we have three days and an even number of students. Can we balance wait times for all students? Sadly, this is not possible, and here a brief explanation. Let's denote the number of students as **S**. The wait times for students on a given day will progressively increase from **0** to **S-1**, averaging at **(S-1)/2**. Consequently, the three-day average would be **3(S-1)/2**. If we assume there exists an arrangement that produces the same wait time for all students after three days, then the total wait time for each student would be equal the average wait time, which is **3(S-1)/2**. This expression does not produce a whole number if **S** is even.
 
-But let's not lose hope. We can still reach a near-balanced solution for students with even count. We can have a solution where the total wait time is a whole number that is **0.5** above the value of **3(S-1)/2** for one half of the students and is **0.5** below that value for the other half of student. The following table shows one such possible sequence for **6** students.
+But let's not lose hope. We can still achieve a near-balanced solution for an even number of students. We can create an arrangement where the total wait time is a whole number that is **0.5** above the value of **3(S-1)/2** for half of the students and is **0.5** below that value for the other half. The following table illustrates one such possible sequence for **6** students.
 
 | Day 1 Sequence | Day 2 Sequence | Day 3 Sequence |
 |---------------:|---------------:|---------------:|
@@ -275,7 +275,7 @@ And now the wait times ordered by the roll numbers.
 | **5**       | 4               | 1               | 3               | 8               |
 | **6**       | 5               | 2               | 1               | 8               |
 
-And for the sake of completeness, a chart for visualizing the above table.
+Finally, for the sake of completeness, here's a chart to visualize the above table.
 
 {{< chart >}}
 type: 'bar',
@@ -325,3 +325,5 @@ options: {
   },
 }
 {{< /chart >}}
+
+In summary, the problem turned out to be far more challenging than I had anticipated. I realized that I could neither expect the teacher to find the solution nor the parents to remember the order if it were shared for their child. However, I made a couple of discoveries along the way, and I'm glad I spent time in tackling it.
