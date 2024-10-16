@@ -5,7 +5,7 @@ summary: An arrangement that evenly distributes the waiting times for student in
 
 ## Background
 
-My younger son studies in an online classroom, and last week was the time for their oral tests. As you might know, written tests are often not reliable indicators of student performance in an online setting, especially when it is India :) The oral tests covered three subjects, each conducted on a separate day. Each day, the teacher would call students one at a time in a specific order to join her online and answer questions.
+My younger son studies in an online classroom, and last week was the time for their oral tests. As you might know, written tests are often not reliable indicators of student performance in an online setting, especially when it is India 🙂 The oral tests covered three subjects, each conducted on a separate day. Each day, the teacher would call students one at a time in a specific order to join her online and answer questions.
 
 There were 31 students in the classroom. If the teacher had called the students by their roll numbers - from 1 to 31 - every day, those with higher roll numbers would always have to wait until the evening. To ensure that wait times were more evenly distributed, the teacher informed the parents that she would call students in the following order over the three days:
 

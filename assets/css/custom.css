@@ -1,3 +1,11 @@
 .max-w-prose {
     max-width: 90ch;
 }
+
+.prose code::before {
+    content: ''
+}
+
+.prose code::after {
+    content: ''
+}

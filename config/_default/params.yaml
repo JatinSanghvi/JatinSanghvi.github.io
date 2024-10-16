@@ -37,7 +37,7 @@ article:
   showBreadcrumbs: false
   showDraftLabel: true
   showEdit: false
-  # editURL: https://github.com/username/repo/
+  editURL: https://github.com/JatinSanghvi/JatinSanghvi.github.io/
   editAppendPath: true
   showHeadingAnchors: true
   showPagination: true
