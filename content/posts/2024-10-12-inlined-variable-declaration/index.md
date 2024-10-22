@@ -3,6 +3,8 @@ title: C# Inlined Variable Declaration
 summary: C# syntactic sugar series - Part 3.
 ---
 
+<!-- IDE0018, IDE0019, IDE0020 -->
+
 Before C# included support for tuples, the traditional approach to returning multiple values from a method was to define `out` method parameters. This method allowed developers to return additional values without creating custom data structures. For example, consider the `TryParse` method in the `Int32` struct:
 
 ```cs
@@ -33,7 +35,17 @@ if (int.TryParse("42", out int number))
 
 In the above example, the scope of the variable `number` is same as the scope inside which `TryParse` method is called. This allows you to refer to the `number` outside the if-block as well.
 
-C# also allows you to inline the declarations when using the `is` operator to check for a variable's underlying type. This feature allows you to replace the following code:
+Traditionally, to check for the variable's underlying type, one had to use the `as` operator followed by a null-check as in the following code:
+
+```cs
+int number = obj as int;
+if (number != null)
+{
+    DoSomething(number);
+}
+```
+
+C# 7.0 introduced the `is` operator to check for the variable's type. Developers could combine the operator with pattern matching to eliminate the null-check as follows:
 
 ```cs
 if (obj is int)
@@ -43,7 +55,7 @@ if (obj is int)
 }
 ```
 
-with a more concise version:
+By inlining the declaration of variable `number`, we can further replace the previous code with a more concise version:
 
 ```cs
 if (obj is int number)

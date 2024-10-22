@@ -3,6 +3,8 @@ title: C# Object Initializers
 summary: C# syntactic sugar series - Part 2.
 ---
 
+<!-- IDE0017 -->
+
 If you've been programming in C# for a while, you're likely familiar with the object initializer syntax that simplifies the process of creating and initializing objects. Consider the following class definition:
 
 ```cs
@@ -36,6 +38,7 @@ In the example above, initializing the properties `FirstName` and `LastName` is 
 ```cs
 public required string FirstName { get; set; }
 ```
+
 With this definition, attempting to create a `Person` object without setting `FirstName` will result in a compilation error:
 
 ```cs
@@ -44,7 +47,6 @@ Person person = new Person { LastName = "Doe" };
 ```
 
 If you want to ensure that `FirstName` is set during initialization and cannot be changed afterward, you can define the property with the **init accessor**:
-
 
 ```cs
 public string FirstName { get; init; }

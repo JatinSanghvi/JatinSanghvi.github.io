@@ -3,6 +3,8 @@ title: C# Throw Expression and Argument Expression
 summary: C# syntactic sugar series - Part 1.
 ---
 
+<!-- IDE0016 -->
+
 *C# as a language continues to evolve with new versions released every year. With the introduction of new language features, it can be challenging to stay up to date. This is the first post in a series where I will cover the new syntactic sugars incorporated in the recent versions of C#.*
 
 A common task for C# developers is ensuring that classes are initialized with valid arguments. This often involves adding null checks in the class constructor, as illustrated below:
