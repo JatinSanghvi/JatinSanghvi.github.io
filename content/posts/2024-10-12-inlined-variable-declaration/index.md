@@ -1,6 +1,7 @@
 ---
-title: C# Inlined Variable Declaration
-summary: C# syntactic sugar series - Part 3.
+title: "C# Inlined Variable Declaration"
+summary: "C# syntactic sugar series - Part 3."
+tags: ["C#", "Syntactic Sugar Series"]
 ---
 
 <!-- IDE0018, IDE0019, IDE0020 -->
@@ -24,7 +25,7 @@ if (int.TryParse("42", out number))
 }
 ```
 
-C# 7 introduced a shorthand for inlining the `out` variable declarations, simplifying the syntax and improving code readability. Now, you can write:
+C# 7.0 introduced a shorthand for inlining the `out` variable declarations, simplifying the syntax and improving code readability. Now, you can write:
 
 ```cs
 if (int.TryParse("42", out int number))
@@ -45,7 +46,7 @@ if (number != null)
 }
 ```
 
-C# 7.0 introduced the `is` operator to check for the variable's type. Developers could combine the operator with pattern matching to eliminate the null-check as follows:
+C# 7.0 also added support for the `is` operator to check for the variable's type that eliminated the null-check as follows:
 
 ```cs
 if (obj is int)
@@ -55,7 +56,7 @@ if (obj is int)
 }
 ```
 
-By inlining the declaration of variable `number`, we can further replace the previous code with a more concise version:
+By inlining the declaration of variable `number` similar to that for `out` variables, we can further modify the previous code with a more succinct version:
 
 ```cs
 if (obj is int number)

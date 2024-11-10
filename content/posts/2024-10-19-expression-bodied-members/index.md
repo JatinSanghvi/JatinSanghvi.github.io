@@ -1,13 +1,14 @@
 ---
-title: C# Expression Body Syntax
-summary: C# syntactic sugar series - Part 4.
+title: "C# Expression Body Syntax"
+summary: "C# syntactic sugar series - Part 4."
+tags: ["C#", "Syntactic Sugar Series"]
 ---
 
 <!-- IDE0021, IDE0022, IDE0025, IDE0027 -->
 
 To support SQL-like LINQ query expressions in C# 3.0, several language features were introduced, including lambda expressions, extension methods, and anonymous types. While the query expressions themselves did not become mainstream, the supporting features gained significant popularity. Building on the success of lambda syntax, C# 6.0 introduced expression-bodied members, which were further enhanced in C# 7.0 and C# 8.0 to support all possible class and struct member types.
 
-Consider the following example of a property definition and its replacement using expression-body syntax:
+Consider the following example of a property definition and its replacement using **expression-body syntax**:
 
 ```cs
 // Traditional Syntax.

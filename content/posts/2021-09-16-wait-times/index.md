@@ -1,6 +1,7 @@
 ---
-title: Balancing the Wait Times
-summary: An arrangement that evenly distributes the waiting times for student in a classroom.
+title: "Balancing the Wait Times"
+summary: "An arrangement that evenly distributes the waiting times for student in a classroom."
+tags: ["Mathematics"]
 ---
 
 ## Background

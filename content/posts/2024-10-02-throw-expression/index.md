@@ -1,6 +1,7 @@
 ---
-title: C# Throw Expression and Argument Expression
-summary: C# syntactic sugar series - Part 1.
+title: "C# Throw Expression and Argument Expression"
+summary: "C# syntactic sugar series - Part 1."
+tags: ["C#", "Syntactic Sugar Series"]
 ---
 
 <!-- IDE0016 -->

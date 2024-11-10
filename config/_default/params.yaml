@@ -44,7 +44,7 @@ article:
   invertPagination: false
   showReadingTime: true
   showTableOfContents: false
-  showTaxonomies: false
+  showTaxonomies: true
   showWordCount: false
   showComments: false
   # sharingLinks:

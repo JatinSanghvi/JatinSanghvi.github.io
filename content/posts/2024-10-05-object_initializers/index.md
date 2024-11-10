@@ -1,6 +1,7 @@
 ---
-title: C# Object Initializers
-summary: C# syntactic sugar series - Part 2.
+title: "C# Object Initializers"
+summary: "C# syntactic sugar series - Part 2."
+tags: ["C#", "Syntactic Sugar Series"]
 ---
 
 <!-- IDE0017 -->
