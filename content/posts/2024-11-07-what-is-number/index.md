@@ -30,7 +30,7 @@ $$ ...00042.000... $$
 
 In high school, I encountered **scientific notation** for expressing very large or small numbers. The first example that struck me was Avogadro's number: \\(6.022 \times 10^{23}\\), which is roughly the number of atoms present in one gram of hydrogen. Scientific notation simplifies calculations, especially in scientific formulas involving multiplication and division. For instance, \\((a_1 \times 10^{b_1}) \times (a_2 \times 10^{b_2})\\) simplifies to \\(a_1 \times a_2 \times 10^{b_1 + b_2}\\), which is less error-prone than multiplying their decimal representations and ensuring that decimal point is correctly placed in the result.
 
-$$ 42 \times 10^{0} $$
+$$ 4.2 \times 10^{1} $$
 
 After tenth grade, my parents enrolled me in computer classes to familiarize me with technology. It was the year 1998, and MS-DOS and Windows 95 were the primary operating systems. Next to my classroom, there were advanced computer classes held for people older than me. One day, when all classes were over and after doing an overtime on the game of Solitaire, I passed by the advanced classroom. I noticed a table drawn on the blackboard listing numbers from 0 to 15 on one side and figures 0000 to 1111 on the other. It made no sense at first, so I kept staring until I could draw the pattern out of zeros and ones, and there I had the first mind-blown experience in my life.
 
@@ -38,7 +38,7 @@ It never crossed my mind that the ten symbols we use for numbers are merely a ch
 
 $$ (42)_{10} $$
 
-My first year of engineering introduced me to complex numbers, which consist of a real part and an imaginary part. These numbers are essential in fields like engineering and physics. They often appear in intermediate calculations and we typically pick the real component in the final result. In these contexts, we treat all real numbers as complex numbers with an imaginary part of zero.
+My first year of engineering introduced me to **complex numbers**, which consist of a real part and an imaginary part. These numbers are essential in fields like engineering and physics. They often appear in intermediate calculations and we typically pick the real component in the final result. In these contexts, we treat all real numbers as complex numbers with an imaginary part of zero.
 
 $$ 42 + 0i $$
 

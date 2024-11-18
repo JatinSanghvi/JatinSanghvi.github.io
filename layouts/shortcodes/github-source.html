@@ -1,0 +1,8 @@
+{{- $filePath := .Get "path" -}}
+{{- $currentFolder := .Page.File.Dir -}}
+{{- range .Site.Language.Params.Author.Links -}}
+    {{- if .github -}}
+        {{- $githubUsername := path.Base .github -}}
+        {{- printf "%s/%s.github.io/tree/main/content/%s%s" .github $githubUsername $currentFolder $filePath -}}
+    {{- end -}}
+{{- end -}}
