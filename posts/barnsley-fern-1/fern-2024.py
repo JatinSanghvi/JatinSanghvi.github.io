@@ -1,6 +1,3 @@
-# Copyright (c) 2024 Jatin Sanghvi
-# All rights reserved.
-
 """Draws the Barnsley fern using deterministic algorithm."""
 
 from PIL import Image, ImageDraw
