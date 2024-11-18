@@ -1,3 +1,6 @@
+# Copyright (c) 2024 Jatin Sanghvi
+# All rights reserved.
+
 """Draws the Barnsley fern - Year 2009 Version (Revised)."""
 
 import random
